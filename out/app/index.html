@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Legend — GTA VI Trophy Guide &amp; Tracker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <h1>Leonida Legend</h1>
+    <p class="tagline">Grand Theft Auto VI — the complete 55-trophy guide &amp; tracker for PlayStation 5. Works fully offline.</p>
+  </div>
+  <div class="progress-box">
+    <div class="progress-line"><span id="progress-count">0 of 55 earned</span><span id="progress-pct">0%</span></div>
+    <div class="progress-track"><div id="progress-bar"></div></div>
+    <div class="grade-counts" id="grade-counts"></div>
+  </div>
+</header>
+
+<nav class="view-tabs" aria-label="Views">
+  <button type="button" id="tab-checklist" class="tab active">Checklist</button>
+  <button type="button" id="tab-roadmap" class="tab">Platinum Roadmap</button>
+</nav>
+
+<section id="checklist-view">
+  <div class="controls">
+    <label class="search-label">Search
+      <input id="search" type="search" placeholder="Trophy name, description, guide…" autocomplete="off">
+    </label>
+    <label>Grade
+      <select id="filter-grade">
+        <option value="all">All grades</option>
+        <option value="platinum">Platinum</option>
+        <option value="gold">Gold</option>
+        <option value="silver">Silver</option>
+        <option value="bronze">Bronze</option>
+      </select>
+    </label>
+    <label>Kind
+      <select id="filter-kind">
+        <option value="all">All kinds</option>
+        <option value="story">Story</option>
+        <option value="collectibles">Collectibles</option>
+        <option value="activities">Activities</option>
+        <option value="online">Online</option>
+        <option value="misc">Misc</option>
+      </select>
+    </label>
+    <label>Missable
+      <select id="filter-missable">
+        <option value="all">All</option>
+        <option value="only">Missable only</option>
+        <option value="safe">Not missable</option>
+      </select>
+    </label>
+    <label>Status
+      <select id="filter-status">
+        <option value="all">All</option>
+        <option value="earned">Earned</option>
+        <option value="unearned">Not yet earned</option>
+      </select>
+    </label>
+    <label class="toggle"><input id="spoiler" type="checkbox"> Spoiler shield (hide story trophies until earned)</label>
+    <button id="export" type="button">Export progress</button>
+    <label class="import-label">Import progress <input id="import" type="file" accept="application/json"></label>
+  </div>
+  <p class="honesty-note">Names, descriptions and grades are the official PlayStation list (sources: Exophase and PSNProfiles, cited per trophy). Kind, roadmap stage and missable flags are built from the official descriptions only — missable flags are cautious warnings, not confirmed one-chance trophies. The official list contains no online trophies. 28 trophies are hidden on PSN; this guide does not guess which.</p>
+  <p id="result-count" class="result-count"></p>
+  <div class="layout">
+    <ol id="trophy-list" class="trophy-list"></ol>
+    <aside id="detail" class="detail" aria-live="polite">
+      <p class="detail-empty">Select a trophy to read its full guide, steps and sources.</p>
+    </aside>
+  </div>
+</section>
+
+<section id="roadmap-view" hidden>
+  <h2>Roadmap to the Platinum</h2>
+  <p class="roadmap-intro">Four stages, in order. The story comes first because several trophies hang off story beats; the cautious missable flags are watched during that first pass; collectibles and activities are swept afterwards; 100% completion and the platinum close the list. No trophy on the official list is an online trophy, so no stage needs multiplayer.</p>
+  <div id="roadmap-stages"></div>
+</section>
+
+<footer>
+  <p>Guides are original text written for this entry; every trophy cites its sources in its detail panel. List data: Exophase and PSNProfiles (official list). Guide references: PowerPyx and PlayStationTrophies. Progress is stored only in your browser (localStorage) and can be exported/imported above.</p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
