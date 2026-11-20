@@ -58,6 +58,17 @@ section { padding: 14px 28px 24px; }
 .import-label input { font-size: 11px; max-width: 150px; }
 .honesty-note { color: var(--muted); font-size: 13px; max-width: 1000px; }
 .result-count { color: var(--accent-2); font-weight: 600; }
+.what-next {
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px;
+  background: var(--panel-2); border: 1px solid var(--accent); border-radius: 12px;
+  padding: 12px 16px; margin-bottom: 14px; cursor: pointer;
+}
+.what-next:hover { border-color: var(--accent-2); }
+.what-next-label { color: var(--accent-2); font-weight: 800; font-size: 12.5px; text-transform: uppercase; letter-spacing: .7px; }
+.what-next-name { font-weight: 700; font-size: 18px; }
+.what-next-meta { color: var(--muted); font-size: 13px; }
+.what-next.done { cursor: default; border-color: var(--gold); }
+.what-next.done .what-next-label { color: var(--gold); font-size: 16px; text-transform: none; letter-spacing: 0; }
 .layout { display: grid; grid-template-columns: minmax(0, 1fr) 400px; gap: 18px; align-items: start; }
 @media (max-width: 980px) { .layout { grid-template-columns: 1fr; } }
 .trophy-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
@@ -120,7 +131,7 @@ footer { padding: 10px 28px 30px; color: var(--muted); font-size: 13px; }
 @media print {
   @page { margin: 13mm; }
   body { background: #fff; color: #000; }
-  .view-tabs, .controls, .honesty-note, .result-count, .detail,
+  .view-tabs, .controls, .honesty-note, .result-count, .detail, .what-next,
   #roadmap-view, .progress-box, footer { display: none !important; }
   .topbar { padding: 0 0 8px; }
   .brand h1 { color: #000; font-size: 24px; }

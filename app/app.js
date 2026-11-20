@@ -24,6 +24,7 @@ const els = {
   status: document.getElementById('filter-status'),
   spoiler: document.getElementById('spoiler'),
   resultCount: document.getElementById('result-count'),
+  whatNext: document.getElementById('what-next'),
   progressCount: document.getElementById('progress-count'),
   progressPct: document.getElementById('progress-pct'),
   progressBar: document.getElementById('progress-bar'),
@@ -76,6 +77,42 @@ function renderProgress() {
     span.append(b, ` ${g}`);
     els.gradeCounts.append(span);
   }
+}
+
+// The "What next?" panel: the unearned trophy with the lowest roadmapOrder —
+// the roadmap sequence stored in the data — so a hunter always knows the next
+// step without scanning the whole list. Clicking it opens that trophy's detail.
+function renderWhatNext() {
+  els.whatNext.replaceChildren();
+  const next = trophies
+    .filter((t) => !earned.has(t.name))
+    .sort((a, b) => a.roadmapOrder - b.roadmapOrder)[0];
+  const label = document.createElement('span');
+  label.className = 'what-next-label';
+  if (!next) {
+    els.whatNext.classList.add('done');
+    els.whatNext.onclick = null;
+    label.textContent = '🏆 Platinum earned — all 55 trophies are in. Vice Got a Price!';
+    els.whatNext.append(label);
+    return;
+  }
+  els.whatNext.classList.remove('done');
+  label.textContent = 'What next?';
+  const name = document.createElement('span');
+  name.className = 'what-next-name';
+  name.textContent = isSpoilerHidden(next) ? 'Hidden story trophy — earn it to reveal' : next.name;
+  const meta = document.createElement('span');
+  meta.className = 'what-next-meta';
+  meta.textContent = `Step ${next.roadmapOrder} of ${trophies.length} · ${next.grade} · Roadmap stage ${next.stage}`
+    + (next.missable ? ' · missable? — watch for it during the story' : '')
+    + ' — click to open its guide';
+  els.whatNext.append(label, name, meta);
+  els.whatNext.onclick = () => {
+    selectedId = next.id;
+    renderList();
+    renderDetail();
+    els.detail.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+  };
 }
 
 function passesFilters(t) {
@@ -288,6 +325,7 @@ function renderRoadmap() {
 
 function renderAll() {
   renderProgress();
+  renderWhatNext();
   renderList();
   renderDetail();
   renderRoadmap();

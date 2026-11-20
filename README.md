@@ -15,6 +15,7 @@ A complete, fully offline guide and tracker for all **55 PlayStation 5 trophies*
 - **Print view** — printing the checklist produces a clean tick-off sheet: all 55 trophies with empty tick boxes, no navigation, filters or detail panel.
 - **Spoiler shield** — a setting that hides the names and descriptions of story trophies until you have earned them.
 - **Platinum roadmap** — a four-stage roadmap built from the official descriptions: story first, a cautious missable watch during the story, collectibles & activities cleanup, then 100% completion and the platinum.
+- **"What next?" panel** — every trophy carries a `roadmapOrder` in the data (1–55: the story stage in campaign order, the missable watch next, cleanup grouped collectibles → activities → story cleanup → misc one-offs, then 100% completion and the platinum last). The checklist opens with a panel naming the lowest-numbered trophy you have not earned yet, with its grade and roadmap stage; click it to open that trophy's guide. Ticking trophies off advances the panel live, and when all 55 are earned it celebrates the platinum.
 - **Honest flags** — kind, roadmap stage and missable flags are inferred from the official descriptions only and are labelled as such in the app. Three trophies carry cautious "missable?" flags, each with its reasoning in its guide. The official list contains **no online trophies**, and 28 trophies are hidden on PSN — this guide does not guess which ones.
 
 ## Data sources
@@ -36,7 +37,7 @@ or serve `app/` with any static file server. To hand the entry in the way the bo
 ```sh
 mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts   # copies app/ + screenshots/ to out/, writes out/dossier.json,
                                                      # plus out/trophies-summary.json (grade/missable counts
-                                                     # computed from the data file)
+                                                     # and roadmap coverage computed from the data file)
 ```
 
 ## Layout

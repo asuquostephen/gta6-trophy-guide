@@ -43,6 +43,11 @@ writeFileSync(
 const trophyDoc = JSON.parse(readFileSync(join(here, 'app', 'data', 'trophies.json'), 'utf8'));
 const byGrade = {};
 for (const t of trophyDoc.trophies) byGrade[t.grade] = (byGrade[t.grade] ?? 0) + 1;
+// Roadmap coverage: how many trophies carry a roadmapOrder (the "What next?"
+// sequence in the app), and the stage counts listed in roadmap order.
+const roadmapStages = [...new Set(trophyDoc.trophies.map((t) => t.stage))]
+  .sort((a, b) => a - b)
+  .map((stage) => ({ stage, count: trophyDoc.trophies.filter((t) => t.stage === stage).length }));
 const summary = {
   game: trophyDoc.game,
   platform: trophyDoc.platform,
@@ -50,5 +55,9 @@ const summary = {
   byGrade,
   missable: trophyDoc.trophies.filter((t) => t.missable).length,
   withSearchTerms: trophyDoc.trophies.filter((t) => typeof t.searchTerms === 'string').length,
+  roadmap: {
+    withOrder: trophyDoc.trophies.filter((t) => Number.isInteger(t.roadmapOrder)).length,
+    stages: roadmapStages,
+  },
 };
 writeFileSync(join(out, 'trophies-summary.json'), JSON.stringify(summary, null, 2) + '\n');
