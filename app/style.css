@@ -93,6 +93,15 @@ section { padding: 14px 28px 24px; }
 .detail a { color: var(--accent-2); }
 .detail .source-role { color: var(--muted); font-size: 12.5px; }
 .detail-empty { color: var(--muted); }
+.detail .note-area {
+  width: 100%; min-height: 84px; resize: vertical;
+  background: #120d20; color: var(--ink); border: 1px solid var(--line); border-radius: 8px;
+  padding: 8px 10px; font: inherit; font-size: 14px; line-height: 1.45;
+}
+.detail .note-area:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+.detail .note-row { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; margin-top: 4px; }
+.detail .note-hint { color: var(--muted); font-size: 12.5px; }
+.detail .note-status { color: var(--accent-2); font-size: 12.5px; font-weight: 700; white-space: nowrap; }
 #roadmap-view h2 { color: var(--accent-2); }
 .roadmap-intro { color: var(--muted); max-width: 900px; }
 .stage { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 14px 18px; margin: 12px 0; }
@@ -104,3 +113,34 @@ section { padding: 14px 28px 24px; }
 .stage li.done { border-color: var(--accent-2); color: var(--accent-2); }
 .stage li .flag { color: #ff9ec4; font-weight: 700; }
 footer { padding: 10px 28px 30px; color: var(--muted); font-size: 13px; }
+
+/* Print: a clean tick-off sheet of the whole list. app.js lifts the filters and
+   the spoiler shield for the print render (beforeprint), so every trophy is
+   listed; here the chrome is hidden and each row gets an empty tick box. */
+@media print {
+  @page { margin: 13mm; }
+  body { background: #fff; color: #000; }
+  .view-tabs, .controls, .honesty-note, .result-count, .detail,
+  #roadmap-view, .progress-box, footer { display: none !important; }
+  .topbar { padding: 0 0 8px; }
+  .brand h1 { color: #000; font-size: 24px; }
+  .tagline { color: #333; }
+  section { padding: 0; }
+  .layout { display: block; }
+  .trophy-list { gap: 0; }
+  .trophy-row {
+    background: #fff; border: none; border-bottom: 1px solid #999; border-radius: 0;
+    color: #000; opacity: 1; cursor: default; break-inside: avoid; padding: 7px 2px;
+  }
+  .trophy-row::before {
+    content: ""; width: 15px; height: 15px; margin-top: 2px;
+    border: 1.5px solid #000; border-radius: 3px;
+  }
+  .trophy-row input[type="checkbox"] { display: none; }
+  .trophy-name { font-size: 13.5px; }
+  .trophy-desc { color: #333; font-size: 11.5px; }
+  .trophy-guide-short { display: none; }
+  .spoiler-hidden .trophy-name, .spoiler-hidden .trophy-desc { filter: none; }
+  .badge { background: #fff !important; color: #000 !important; border: 1px solid #000; }
+  .badges .badge.kind { display: none; }
+}

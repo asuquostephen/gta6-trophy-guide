@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Leonida Legend — GTA VI Trophy Guide &amp; Tracker</title>
+<link rel="icon" href="data:,">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -27,7 +28,7 @@
 <section id="checklist-view">
   <div class="controls">
     <label class="search-label">Search
-      <input id="search" type="search" placeholder="Trophy name, description, guide…" autocomplete="off">
+      <input id="search" type="search" placeholder="Trophy name, description, guide, or plain words — heist, drone, fishing…" autocomplete="off">
     </label>
     <label>Grade
       <select id="filter-grade">
@@ -62,6 +63,7 @@
         <option value="unearned">Not yet earned</option>
       </select>
     </label>
+    <label class="toggle"><input id="filter-missable-only" type="checkbox"> Missable only (quick toggle)</label>
     <label class="toggle"><input id="spoiler" type="checkbox"> Spoiler shield (hide story trophies until earned)</label>
     <button id="export" type="button">Export progress</button>
     <label class="import-label">Import progress <input id="import" type="file" accept="application/json"></label>
@@ -71,7 +73,7 @@
   <div class="layout">
     <ol id="trophy-list" class="trophy-list"></ol>
     <aside id="detail" class="detail" aria-live="polite">
-      <p class="detail-empty">Select a trophy to read its full guide, steps and sources.</p>
+      <p class="detail-empty">Select a trophy to read its full guide, steps and sources — and to keep your own notes on it.</p>
     </aside>
   </div>
 </section>
@@ -83,7 +85,7 @@
 </section>
 
 <footer>
-  <p>Guides are original text written for this entry; every trophy cites its sources in its detail panel. List data: Exophase and PSNProfiles (official list). Guide references: PowerPyx and PlayStationTrophies. Progress is stored only in your browser (localStorage) and can be exported/imported above.</p>
+  <p>Guides are original text written for this entry; every trophy cites its sources in its detail panel. List data: Exophase and PSNProfiles (official list). Guide references: PowerPyx and PlayStationTrophies. Progress and your per-trophy notes are stored only in your browser (localStorage); progress can be exported/imported above. Printing this page produces a clean tick-off sheet of all 55 trophies.</p>
 </footer>
 
 <script type="module" src="app.js"></script>

@@ -10,7 +10,9 @@ A complete, fully offline guide and tracker for all **55 PlayStation 5 trophies*
 
 - **Checklist of all 55 trophies** with official names, descriptions and grades, a one-line summary per trophy, and a full detail panel per trophy: official description, grade, kind, missable flag, tracked target count where PlayStation tracks one, the full guide, step-by-step steps, and cited sources.
 - **Progress tracking** — tick trophies off; progress is saved in the browser (localStorage), with a completion percentage and per-grade counts, and can be **exported to a JSON file and imported back**.
-- **Filters and search** — full-text search plus filters by grade (platinum/gold/silver/bronze), kind (story, collectibles, activities, online, misc), missable status, and earned/unearned.
+- **Personal notes** — every trophy's detail panel carries a notes box for your own plan, attempts and reminders; notes save to localStorage as you type (with a "Note saved" confirmation) and are restored when you reopen the trophy.
+- **Filters and search** — full-text search that also matches plain-language synonyms (search "heist", "drone" or "fishing" and the right trophies surface, via a `searchTerms` field in the data), plus filters by grade (platinum/gold/silver/bronze), kind (story, collectibles, activities, online, misc), missable status, and earned/unearned. A **Missable only quick toggle** narrows the list to the flagged trophies in one click, in sync with the Missable filter.
+- **Print view** — printing the checklist produces a clean tick-off sheet: all 55 trophies with empty tick boxes, no navigation, filters or detail panel.
 - **Spoiler shield** — a setting that hides the names and descriptions of story trophies until you have earned them.
 - **Platinum roadmap** — a four-stage roadmap built from the official descriptions: story first, a cautious missable watch during the story, collectibles & activities cleanup, then 100% completion and the platinum.
 - **Honest flags** — kind, roadmap stage and missable flags are inferred from the official descriptions only and are labelled as such in the app. Three trophies carry cautious "missable?" flags, each with its reasoning in its guide. The official list contains **no online trophies**, and 28 trophies are hidden on PSN — this guide does not guess which ones.
@@ -32,7 +34,9 @@ node serve.ts          # serves app/ at http://localhost:8080
 or serve `app/` with any static file server. To hand the entry in the way the bounty expects:
 
 ```sh
-mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts   # copies app/ + screenshots/ to out/ and writes out/dossier.json
+mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts   # copies app/ + screenshots/ to out/, writes out/dossier.json,
+                                                     # plus out/trophies-summary.json (grade/missable counts
+                                                     # computed from the data file)
 ```
 
 ## Layout

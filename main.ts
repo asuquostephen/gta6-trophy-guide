@@ -15,7 +15,7 @@
 // Outside the grader's container, MAKEFUN_OUTPUT_DIR stands in for /output:
 //   mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
 
-import { cpSync, existsSync, mkdirSync, writeFileSync } from 'node:fs';
+import { cpSync, existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { buildDossier } from './vendor/makefun-frontend.ts';
@@ -35,3 +35,20 @@ writeFileSync(
   join(out, 'dossier.json'),
   buildDossier(out, { text_max_bytes: 163840, screenshots: { max: 4, max_bytes: 262144 }, app_max_files: 993, app_max_bytes: 50331648 }),
 );
+
+// Sidecar summary of the trophy list, computed from the app's own data file and
+// written beside the dossier (the dossier above is left exactly as buildDossier
+// wrote it). Counts are derived, never hand-typed, so they cannot drift from
+// app/data/trophies.json.
+const trophyDoc = JSON.parse(readFileSync(join(here, 'app', 'data', 'trophies.json'), 'utf8'));
+const byGrade = {};
+for (const t of trophyDoc.trophies) byGrade[t.grade] = (byGrade[t.grade] ?? 0) + 1;
+const summary = {
+  game: trophyDoc.game,
+  platform: trophyDoc.platform,
+  total: trophyDoc.trophies.length,
+  byGrade,
+  missable: trophyDoc.trophies.filter((t) => t.missable).length,
+  withSearchTerms: trophyDoc.trophies.filter((t) => typeof t.searchTerms === 'string').length,
+};
+writeFileSync(join(out, 'trophies-summary.json'), JSON.stringify(summary, null, 2) + '\n');

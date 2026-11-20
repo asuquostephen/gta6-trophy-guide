@@ -4,6 +4,7 @@
 
 const STORAGE_EARNED = 'leonida-legend-earned-v1';
 const STORAGE_SPOILER = 'leonida-legend-spoiler-v1';
+const STORAGE_NOTES = 'leonida-legend-notes-v1';
 const GRADES = ['platinum', 'gold', 'silver', 'bronze'];
 const STAGE_INFO = [
   { n: 1, title: 'Stage 1 — Story first', text: 'Play the campaign from Gone Fishing to the final mission, finishing the named-character strands (Andy, Kenton, Billy, Randy, Tyrone) as they appear. Story trophies cannot be earned out of order, and this pass also unlocks most of the world for cleanup.' },
@@ -19,6 +20,7 @@ const els = {
   grade: document.getElementById('filter-grade'),
   kind: document.getElementById('filter-kind'),
   missable: document.getElementById('filter-missable'),
+  missableOnly: document.getElementById('filter-missable-only'),
   status: document.getElementById('filter-status'),
   spoiler: document.getElementById('spoiler'),
   resultCount: document.getElementById('result-count'),
@@ -36,13 +38,20 @@ const els = {
 const params = new URLSearchParams(location.search);
 let trophies = [];
 let earned = new Set(JSON.parse(localStorage.getItem(STORAGE_EARNED) ?? '[]'));
+let notes = JSON.parse(localStorage.getItem(STORAGE_NOTES) ?? '{}');
 let selectedId = null;
+let printAll = false;
 
 function saveEarned() {
   localStorage.setItem(STORAGE_EARNED, JSON.stringify([...earned]));
 }
 
+function saveNotes() {
+  localStorage.setItem(STORAGE_NOTES, JSON.stringify(notes));
+}
+
 function isSpoilerHidden(t) {
+  if (printAll) return false;
   return els.spoiler.checked && t.kind === 'story' && !earned.has(t.name);
 }
 
@@ -70,8 +79,9 @@ function renderProgress() {
 }
 
 function passesFilters(t) {
+  if (printAll) return true;
   const q = els.search.value.trim().toLowerCase();
-  if (q && !`${t.name} ${t.description} ${t.guide} ${t.kind}`.toLowerCase().includes(q)) return false;
+  if (q && !`${t.name} ${t.description} ${t.guide} ${t.kind} ${t.searchTerms ?? ''}`.toLowerCase().includes(q)) return false;
   if (els.grade.value !== 'all' && t.grade !== els.grade.value) return false;
   if (els.kind.value !== 'all' && t.kind !== els.kind.value) return false;
   if (els.missable.value === 'only' && !t.missable) return false;
@@ -152,7 +162,7 @@ function renderDetail() {
   if (!t) {
     const p = document.createElement('p');
     p.className = 'detail-empty';
-    p.textContent = 'Select a trophy to read its full guide, steps and sources.';
+    p.textContent = 'Select a trophy to read its full guide, steps and sources — and to keep your own notes on it.';
     els.detail.append(p);
     return;
   }
@@ -207,6 +217,40 @@ function renderDetail() {
     p.append(a, role);
     els.detail.append(p);
   }
+
+  const nh = document.createElement('h4');
+  nh.textContent = 'Your notes';
+  const noteBox = document.createElement('textarea');
+  noteBox.className = 'note-area';
+  noteBox.rows = 4;
+  noteBox.placeholder = 'Your own plan for this one — where you are attempting it, what to bring, what went wrong last time…';
+  noteBox.value = notes[t.id] ?? '';
+  noteBox.setAttribute('aria-label', `Your notes for ${t.name}`);
+  const noteRow = document.createElement('div');
+  noteRow.className = 'note-row';
+  const noteHint = document.createElement('span');
+  noteHint.className = 'note-hint';
+  noteHint.textContent = 'Saved in this browser only, as you type.';
+  const noteStatus = document.createElement('span');
+  noteStatus.className = 'note-status';
+  noteStatus.hidden = true;
+  noteStatus.textContent = 'Note saved ✓';
+  noteRow.append(noteHint, noteStatus);
+  let noteTimer = null;
+  let hideTimer = null;
+  noteBox.addEventListener('input', () => {
+    clearTimeout(noteTimer);
+    clearTimeout(hideTimer);
+    noteStatus.hidden = true;
+    noteTimer = setTimeout(() => {
+      const text = noteBox.value.trim();
+      if (text) notes[t.id] = noteBox.value; else delete notes[t.id];
+      saveNotes();
+      noteStatus.hidden = false;
+      hideTimer = setTimeout(() => { noteStatus.hidden = true; }, 2000);
+    }, 350);
+  });
+  els.detail.append(nh, noteBox, noteRow);
 }
 
 function renderRoadmap() {
@@ -263,6 +307,20 @@ for (const el of [els.search, els.grade, els.kind, els.missable, els.status]) {
   el.addEventListener('input', renderList);
   el.addEventListener('change', renderList);
 }
+// The "Missable only" quick toggle and the Missable select are two views of the
+// same filter: moving either one updates the other.
+els.missable.addEventListener('change', () => {
+  els.missableOnly.checked = els.missable.value === 'only';
+});
+els.missableOnly.addEventListener('change', () => {
+  els.missable.value = els.missableOnly.checked ? 'only' : 'all';
+  renderList();
+});
+// Printing renders the whole list as a tick-off sheet (see the @media print
+// rules in style.css): filters and the spoiler shield are lifted for the print
+// render only, then the on-screen view is restored.
+window.addEventListener('beforeprint', () => { printAll = true; renderList(); });
+window.addEventListener('afterprint', () => { printAll = false; renderList(); });
 els.spoiler.checked = localStorage.getItem(STORAGE_SPOILER) === '1';
 els.spoiler.addEventListener('change', () => {
   localStorage.setItem(STORAGE_SPOILER, els.spoiler.checked ? '1' : '0');
@@ -294,15 +352,21 @@ document.getElementById('import').addEventListener('change', async (e) => {
 });
 
 // Deep links used for screenshots and sharing views: ?grade=, ?kind=, ?missable=only,
-// ?view=roadmap, ?detail=<id>, ?spoiler=1, ?scroll=<px>. They only set local UI state.
+// ?view=roadmap, ?detail=<id>, ?spoiler=1, ?scroll=<px>, and ?note=<text> (with ?detail=,
+// pre-fills that trophy's personal note). They only set local UI state.
 if (params.get('grade')) els.grade.value = params.get('grade');
 if (params.get('kind')) els.kind.value = params.get('kind');
 if (params.get('missable')) els.missable.value = params.get('missable');
+els.missableOnly.checked = els.missable.value === 'only';
 if (params.get('spoiler') === '1') { els.spoiler.checked = true; }
 if (params.get('detail')) selectedId = Number(params.get('detail'));
 
 const doc = await (await fetch('data/trophies.json')).json();
 trophies = doc.trophies;
+if (params.get('note') && selectedId !== null) {
+  notes[selectedId] = params.get('note');
+  saveNotes();
+}
 renderAll();
 if (params.get('view') === 'roadmap') showView('roadmap');
 if (params.get('scroll')) requestAnimationFrame(() => window.scrollTo(0, Number(params.get('scroll')) || 0));
