@@ -1,392 +1,499 @@
 {
- "game": "Grand Theft Auto VI",
- "platform": "PlayStation 5",
- "list": "the official 55 trophies, 2026-11-18",
- "trophies": [
-  {
-   "id": 1,
-   "name": "Vice Got a Price!",
-   "description": "Congratulations! You're a Leonida Legend.",
-   "grade": "platinum",
-   "guide": "Earn the other 54 trophies."
-  },
-  {
-   "id": 2,
-   "name": "Just Like Paradise",
-   "description": "Complete Gone Fishing.",
-   "grade": "bronze",
-   "guide": "Finish the opening mission, Gone Fishing."
-  },
-  {
-   "id": 3,
-   "name": "Paradise Lost",
-   "description": "Complete Chapter 1.",
-   "grade": "bronze",
-   "guide": "Finish Chapter 1."
-  },
-  {
-   "id": 4,
-   "name": "T**s Ass Drug Money",
-   "description": "Complete Chapter 2.",
-   "grade": "bronze",
-   "guide": "Finish Chapter 2."
-  },
-  {
-   "id": 5,
-   "name": "Vice City, Baby!",
-   "description": "Complete Chapter 3.",
-   "grade": "bronze",
-   "guide": "Finish Chapter 3."
-  },
-  {
-   "id": 6,
-   "name": "Top Of The World, Ma",
-   "description": "Complete Chapter 4.",
-   "grade": "bronze",
-   "guide": "Finish Chapter 4."
-  },
-  {
-   "id": 7,
-   "name": "You Gotta Know When to Get Off",
-   "description": "Complete the final mission.",
-   "grade": "gold",
-   "guide": "Finish the final mission (gold)."
-  },
-  {
-   "id": 8,
-   "name": "Trust",
-   "description": "Complete Breakfast Run.",
-   "grade": "bronze",
-   "guide": "Finish the mission Breakfast Run."
-  },
-  {
-   "id": 9,
-   "name": "Break the Bank",
-   "description": "Complete The Cartel Heist.",
-   "grade": "bronze",
-   "guide": "Finish the mission The Cartel Heist."
-  },
-  {
-   "id": 10,
-   "name": "Family Matters",
-   "description": "Complete Child's Play.",
-   "grade": "bronze",
-   "guide": "Finish the mission Child's Play."
-  },
-  {
-   "id": 11,
-   "name": "DWNFALL",
-   "description": "Complete Headliners.",
-   "grade": "bronze",
-   "guide": "Finish the mission Headliners."
-  },
-  {
-   "id": 12,
-   "name": "Hi-Jacked",
-   "description": "Complete VCIA Takedown.",
-   "grade": "bronze",
-   "guide": "Finish the mission VCIA Takedown."
-  },
-  {
-   "id": 13,
-   "name": "Snow Storm",
-   "description": "Complete Operation Savage Glory.",
-   "grade": "bronze",
-   "guide": "Finish the mission Operation Savage Glory."
-  },
-  {
-   "id": 14,
-   "name": "A Long Road",
-   "description": "Attain 100% Completion.",
-   "grade": "gold",
-   "guide": "Reach 100% completion (gold)."
-  },
-  {
-   "id": 15,
-   "name": "Cunning Stunts",
-   "description": "Complete 250 Stunts.",
-   "grade": "silver",
-   "guide": "Pull off 250 stunts (silver)."
-  },
-  {
-   "id": 16,
-   "name": "Master of None",
-   "description": "Try each type of activity once.",
-   "grade": "bronze",
-   "guide": "Try all 9 activity types once."
-  },
-  {
-   "id": 17,
-   "name": "The Shootist",
-   "description": "Earn a gold medal in all Shooting Range challenges.",
-   "grade": "silver",
-   "guide": "Gold all 42 Shooting Range challenges (silver)."
-  },
-  {
-   "id": 18,
-   "name": "Top Fun",
-   "description": "Win a Top Fun Drone Race at every location.",
-   "grade": "bronze",
-   "guide": "Win a Top Fun drone race at all 14 locations."
-  },
-  {
-   "id": 19,
-   "name": "Earn Cash, Not Kudos",
-   "description": "Win 20 different races.",
-   "grade": "bronze",
-   "guide": "Win 20 different races."
-  },
-  {
-   "id": 20,
-   "name": "Baited My Tackle",
-   "description": "Beat Cal in a fishing challenge.",
-   "grade": "bronze",
-   "guide": "Beat Cal in a fishing challenge."
-  },
-  {
-   "id": 21,
-   "name": "Stick Fiddler",
-   "description": "Complete an arcade game.",
-   "grade": "bronze",
-   "guide": "Finish one arcade game."
-  },
-  {
-   "id": 22,
-   "name": "Road to Rehabilitation",
-   "description": "Complete the final mission for Andy.",
-   "grade": "bronze",
-   "guide": "Finish Andy's last mission."
-  },
-  {
-   "id": 23,
-   "name": "This Was No Boat Accident",
-   "description": "Complete the final mission for Kenton.",
-   "grade": "bronze",
-   "guide": "Finish Kenton's last mission."
-  },
-  {
-   "id": 24,
-   "name": "The Lone Rider",
-   "description": "Complete the final mission for Billy.",
-   "grade": "bronze",
-   "guide": "Finish Billy's last mission."
-  },
-  {
-   "id": 25,
-   "name": "Strangers & Freaks",
-   "description": "Complete 8 mission strands for strangers across the state of Leonida.",
-   "grade": "silver",
-   "guide": "Finish 8 stranger strands (silver)."
-  },
-  {
-   "id": 26,
-   "name": "Supply & Demand",
-   "description": "Complete the final mission for Randy.",
-   "grade": "bronze",
-   "guide": "Finish Randy's last mission."
-  },
-  {
-   "id": 27,
-   "name": "Spin On This!",
-   "description": "Complete the final mission for Tyrone.",
-   "grade": "bronze",
-   "guide": "Finish Tyrone's last mission."
-  },
-  {
-   "id": 28,
-   "name": "Positive Mental Attitude",
-   "description": "Meditate at every spot across Leonida.",
-   "grade": "bronze",
-   "guide": "Meditate at all 18 spots."
-  },
-  {
-   "id": 29,
-   "name": "Fair Game",
-   "description": "Hunt a unique animal for Bret.",
-   "grade": "bronze",
-   "guide": "Hunt the unique animal for Bret."
-  },
-  {
-   "id": 30,
-   "name": "Don't Touch My Deck",
-   "description": "Complete 3 Collectible Card sets.",
-   "grade": "silver",
-   "guide": "Complete 3 collectible card sets (silver)."
-  },
-  {
-   "id": 31,
-   "name": "You WAiNKer!",
-   "description": "WAiNK It at 100 locations.",
-   "grade": "silver",
-   "guide": "WAiNK It at 100 locations (silver)."
-  },
-  {
-   "id": 32,
-   "name": "One Last Thing",
-   "description": "Complete 50 Challenges.",
-   "grade": "bronze",
-   "guide": "Finish 50 challenges."
-  },
-  {
-   "id": 33,
-   "name": "Hot Together",
-   "description": "Lose a 4 star Wanted Level with your partner and escape the heat.",
-   "grade": "bronze",
-   "guide": "Lose a 4-star wanted level with your partner."
-  },
-  {
-   "id": 34,
-   "name": "Retail Therapy",
-   "description": "Rob 3 shops back-to-back with your partner without losing your Wanted Level.",
-   "grade": "bronze",
-   "guide": "Rob 3 shops in a row with your partner, keeping your wanted level."
-  },
-  {
-   "id": 35,
-   "name": "Whip It Good",
-   "description": "Discover 100 vehicles.",
-   "grade": "bronze",
-   "guide": "Discover 100 vehicles."
-  },
-  {
-   "id": 36,
-   "name": "Gunslinger",
-   "description": "Take down 5 enemies in a single use of Combat Focus.",
-   "grade": "bronze",
-   "guide": "Down 5 enemies in one Combat Focus."
-  },
-  {
-   "id": 37,
-   "name": "Catch Me If You Can",
-   "description": "Make an unscheduled departure at VCIA.",
-   "grade": "bronze",
-   "guide": "Leave VCIA in an unscheduled way."
-  },
-  {
-   "id": 38,
-   "name": "Challenging Tank",
-   "description": "Kinda hot in these Rhinos.",
-   "grade": "bronze",
-   "guide": "Deal with Rhinos (tanks)."
-  },
-  {
-   "id": 39,
-   "name": "Sneakthief",
-   "description": "Rob a jewelry store without being detected.",
-   "grade": "bronze",
-   "guide": "Rob a jewelry store without being seen."
-  },
-  {
-   "id": 40,
-   "name": "Maximum Withdrawal",
-   "description": "Rob 5 Bank Vaults and escape.",
-   "grade": "silver",
-   "guide": "Rob 5 bank vaults and escape (silver)."
-  },
-  {
-   "id": 41,
-   "name": "A Classic Blitz Play",
-   "description": "Rob an Armored Truck and escape.",
-   "grade": "bronze",
-   "guide": "Rob an armored truck and escape."
-  },
-  {
-   "id": 42,
-   "name": "The Goodtime State",
-   "description": "Explore all of Leonida.",
-   "grade": "bronze",
-   "guide": "Explore all 52 areas of Leonida."
-  },
-  {
-   "id": 43,
-   "name": "Pest Control",
-   "description": "Rob an Illegal Operation belonging to each gang.",
-   "grade": "bronze",
-   "guide": "Rob one illegal operation of each of the 9 gangs."
-  },
-  {
-   "id": 44,
-   "name": "In The Beginning…",
-   "description": "Enjoy a cocktail with a view on Ocean Beach.",
-   "grade": "bronze",
-   "guide": "Have a cocktail with a view on Ocean Beach."
-  },
-  {
-   "id": 45,
-   "name": "Capital Offense",
-   "description": "Smash your way out of a vehicle showroom in classic style.",
-   "grade": "bronze",
-   "guide": "Smash out of a vehicle showroom in style."
-  },
-  {
-   "id": 46,
-   "name": "Let’s Go Bowling",
-   "description": "Follow-through at the Kolt & Associates' bowling alley.",
-   "grade": "bronze",
-   "guide": "Play bowling at the Kolt & Associates alley."
-  },
-  {
-   "id": 47,
-   "name": "Personal Best",
-   "description": "A partnership with mass appeal.",
-   "grade": "bronze",
-   "guide": "A partnership moment with mass appeal."
-  },
-  {
-   "id": 48,
-   "name": "Actions Speak Louder",
-   "description": "Choices made (for better or worse).",
-   "grade": "bronze",
-   "guide": "Make choices (PSN tracks a count to 500)."
-  },
-  {
-   "id": 49,
-   "name": "Bad Luck, I Guess",
-   "description": "Second time's the charm.",
-   "grade": "bronze",
-   "guide": "Succeed on a second try."
-  },
-  {
-   "id": 50,
-   "name": "The Truth Is Out There",
-   "description": "What the hell just happened?",
-   "grade": "bronze",
-   "guide": "Witness something strange."
-  },
-  {
-   "id": 51,
-   "name": "Ten Pin",
-   "description": "Bowl 'em over with a melee drive-by.",
-   "grade": "bronze",
-   "guide": "Knock someone down with a melee drive-by."
-  },
-  {
-   "id": 52,
-   "name": "Dime on the Dollar",
-   "description": "Earn $250,000 laundering Marked Bills through your contacts.",
-   "grade": "bronze",
-   "guide": "Launder $250,000 of marked bills."
-  },
-  {
-   "id": 53,
-   "name": "Treat Yo Self",
-   "description": "Spend $100,000 across all shops.",
-   "grade": "bronze",
-   "guide": "Spend $100,000 in shops."
-  },
-  {
-   "id": 54,
-   "name": "Little Boxes",
-   "description": "Purchase all garage properties.",
-   "grade": "bronze",
-   "guide": "Buy all 8 garage properties."
-  },
-  {
-   "id": 55,
-   "name": "On the Spot",
-   "description": "Register 10 vehicles to the Scooter Bros app.",
-   "grade": "bronze",
-   "guide": "Register 10 vehicles in the Scooter Bros app."
-  }
- ]
+  "trophies": [
+    {
+      "name": "Vice Got a Price!",
+      "grade": "Platinum",
+      "description": "Collect every other trophy and claim the platinum for Leonida.",
+      "guide": "This unlocks automatically once the other 54 trophies are earned, so treat it as a final checklist rather than a task of its own. Work through the roadmap stages in order and tick off each trophy in the tracker as you go. If the counter stalls near the end, compare your earned list against the stage totals to find the one you missed.",
+      "missable": false,
+      "hidden": false,
+      "stage": 5
+    },
+    {
+      "name": "Just Like Paradise",
+      "grade": "Bronze",
+      "description": "Set foot in Leonida for the first time and begin the story.",
+      "guide": "Start a new game and play through the opening sequence until you regain free control. The trophy pops during or just after the introductory mission, so no extra action is needed. If you load an older save, simply finish the first story beat again and it will still register.",
+      "missable": false,
+      "hidden": false,
+      "stage": 1
+    },
+    {
+      "name": "Paradise Lost",
+      "grade": "Bronze",
+      "description": "Watch a safe place slip away as the story takes a darker turn.",
+      "guide": "Progress through the early story missions until the scripted loss event plays out in full. Keep following the main markers and do not reload an older save to avoid it, because the moment is mandatory. The trophy unlocks right after the following cutscene ends.",
+      "missable": false,
+      "hidden": true,
+      "stage": 1
+    },
+    {
+      "name": "T**s Ass Drug Money",
+      "grade": "Bronze",
+      "description": "Complete a chaotic Vice City job where the payout comes with trouble.",
+      "guide": "Follow the main story until this job becomes available, then finish every objective including the escape. Bring armour and park a fast getaway car facing the exit to make the final chase much easier. The trophy unlocks when the mission complete screen appears.",
+      "missable": false,
+      "hidden": true,
+      "stage": 1
+    },
+    {
+      "name": "Vice City, Baby!",
+      "grade": "Bronze",
+      "description": "Return to Vice City in style and make your presence known.",
+      "guide": "Play the story mission that formally opens Vice City as a fully explorable district. Take a moment to explore the marked area when prompted instead of rushing the next objective, as the unlock is tied to the arrival sequence. It should pop before the next mission marker appears.",
+      "missable": false,
+      "hidden": true,
+      "stage": 1
+    },
+    {
+      "name": "Top Of The World, Ma",
+      "grade": "Bronze",
+      "description": "Reach a high vantage point and take in the Leonida skyline.",
+      "guide": "During the related story mission, climb to the marked rooftop or tower summit and wait for the prompt to finish. Outside the mission you can also reach the tallest downtown rooftop by helicopter or parachute. Stand at the highest point for a few seconds and the trophy will trigger.",
+      "missable": false,
+      "hidden": false,
+      "stage": 1
+    },
+    {
+      "name": "You Gotta Know When to Get Off",
+      "grade": "Gold",
+      "description": "Make a pivotal story choice about when to walk away.",
+      "guide": "This is tied to a major late-story decision, so keep a manual save just before the branching mission begins. Play the mission to its conclusion and watch the full outcome without skipping the final cutscene. Because the choice shapes the ending, finish the game once before reloading to explore the alternative path.",
+      "missable": true,
+      "hidden": true,
+      "stage": 2
+    },
+    {
+      "name": "Trust",
+      "grade": "Bronze",
+      "description": "Prove loyalty to a partner when the story tests it.",
+      "guide": "Complete the story mission centred on trust between the two protagonists. Choose the cooperative options when prompted and finish the paired objective without letting your partner go down. The trophy unlocks at the mission results screen.",
+      "missable": true,
+      "hidden": true,
+      "stage": 1
+    },
+    {
+      "name": "Break the Bank",
+      "grade": "Bronze",
+      "description": "Pull off a major bank job and escape with the take.",
+      "guide": "Prepare for the heist by completing its setup missions and picking a reliable crew where you have the choice. During the job, stay in cover during the vault phase and switch characters whenever the game prompts you. Lose the wanted level fully after escaping to bank the completion.",
+      "missable": false,
+      "hidden": true,
+      "stage": 1
+    },
+    {
+      "name": "Family Matters",
+      "grade": "Bronze",
+      "description": "Resolve a family storyline that runs alongside the main plot.",
+      "guide": "Accept the family-related calls and missions whenever they appear between story beats, rather than postponing them. These beats are easy to leave behind, so clear them before starting the final story arc. The trophy pops after the last family cutscene resolves.",
+      "missable": true,
+      "hidden": true,
+      "stage": 2
+    },
+    {
+      "name": "DWNFALL",
+      "grade": "Bronze",
+      "description": "Bring down a powerful rival operation in a story showdown.",
+      "guide": "Play through the mid-story arc until the confrontation mission unlocks on the map. Stock up on heavy weapons, armour and snacks before starting, because the fight arrives in several waves. Defeat the target and finish the escape sequence to earn the trophy.",
+      "missable": false,
+      "hidden": true,
+      "stage": 1
+    },
+    {
+      "name": "Hi-Jacked",
+      "grade": "Bronze",
+      "description": "Steal a high-value vehicle or aircraft while it is mid-transit.",
+      "guide": "In the hijack story mission, approach the target quietly until the takeover prompt appears, then seize control quickly. Shake off pursuers by cutting through alleys and off-road shortcuts instead of staying on main highways. Deliver the prize to the marked drop-off with as little damage as possible.",
+      "missable": false,
+      "hidden": false,
+      "stage": 1
+    },
+    {
+      "name": "Snow Storm",
+      "grade": "Bronze",
+      "description": "Survive a job that goes badly wrong in a storm-lashed sequence.",
+      "guide": "This story mission is largely linear, so follow the objective markers and use the cover the game highlights for you. Conserve ammunition in the early rooms because resupply is limited later on. Finishing the sequence and reaching the getaway vehicle completes the requirement.",
+      "missable": false,
+      "hidden": true,
+      "stage": 1
+    },
+    {
+      "name": "A Long Road",
+      "grade": "Gold",
+      "description": "Complete the full main story from the opening to the finale.",
+      "guide": "Finish every main story mission through to the credits, including the multi-part finale. Side content can safely wait, but clear the missable story beats flagged in stage two before you pass the point of no return. The trophy unlocks as the credits begin or just after they end.",
+      "missable": false,
+      "hidden": false,
+      "stage": 1
+    },
+    {
+      "name": "Cunning Stunts",
+      "grade": "Silver",
+      "description": "Clear a set of stunt jumps and precision driving challenges.",
+      "guide": "Find stunt jump ramps scattered across Leonida and land cleanly beyond the marked zone on all four wheels. A fast sports bike gives you the best mid-air control for the longer gaps. Track completed jumps on your map and save the coastal jumps for last, as they are the easiest to overlook.",
+      "missable": false,
+      "hidden": false,
+      "stage": 3
+    },
+    {
+      "name": "Master of None",
+      "grade": "Bronze",
+      "description": "Try your hand at a wide spread of activities across Leonida.",
+      "guide": "Sample each major activity type at least once: a race, a flight challenge, a shooting range visit and a leisure mini-game are a good starting set. The tracker counts variety rather than mastery, so one honest attempt at each is enough. Work through the activity icons district by district so nothing is left unvisited.",
+      "missable": false,
+      "hidden": true,
+      "stage": 3
+    },
+    {
+      "name": "The Shootist",
+      "grade": "Silver",
+      "description": "Prove your aim at the shooting range with high scores.",
+      "guide": "Visit the shooting range and clear the medal targets for each weapon class, starting with pistols to learn the scoring rhythm. Aim for headshots and reload during target transitions so you never waste scoring time. Gold scores on the later rifles are easier once your shooting stat is levelled up in free roam.",
+      "missable": false,
+      "hidden": false,
+      "stage": 4
+    },
+    {
+      "name": "Top Fun",
+      "grade": "Bronze",
+      "description": "Win a high-octane vehicle challenge against the clock.",
+      "guide": "Enter the featured race or time trial and finish in first place or inside the gold time. Learn the course on a practice run first, then use a fully upgraded vehicle for your serious attempt. Slipstreaming opponents on straights and braking early for hairpins will shave the seconds you need.",
+      "missable": false,
+      "hidden": true,
+      "stage": 3
+    },
+    {
+      "name": "Earn Cash, Not Kudos",
+      "grade": "Bronze",
+      "description": "Turn a profit through work, jobs and side hustles.",
+      "guide": "Earn money through legitimate in-game work such as taxi fares, deliveries, bounty targets or business payouts until the threshold is reached. Story payouts alone may not be enough, so mix in repeatable side jobs between missions. Bank your earnings at an ATM or safehouse so a bust does not set you back.",
+      "missable": false,
+      "hidden": false,
+      "stage": 4
+    },
+    {
+      "name": "Baited My Tackle",
+      "grade": "Bronze",
+      "description": "Land a notable catch while fishing in Leonida waters.",
+      "guide": "Buy a rod and bait from a tackle shop, then head to a marked fishing spot on a pier or out on a boat. Cast, wait for a strong bite and reel steadily without letting the line tension max out. Catching one of the larger species listed in the fishing menu completes the requirement.",
+      "missable": false,
+      "hidden": false,
+      "stage": 3
+    },
+    {
+      "name": "Stick Fiddler",
+      "grade": "Bronze",
+      "description": "Show off skill with a pool cue or similar bar game.",
+      "guide": "Find a bar or clubhouse with a playable table game and win a full match against the house opponent. Take your time lining up shots and use gentle power for close balls to avoid fouls. If you lose, simply challenge the next opponent, as only one clean win is required.",
+      "missable": false,
+      "hidden": false,
+      "stage": 3
+    },
+    {
+      "name": "Road to Rehabilitation",
+      "grade": "Bronze",
+      "description": "Help a troubled character take steps toward turning things around.",
+      "guide": "Follow this side storyline whenever its marker appears and complete each stage of the recovery arc. Some steps only unlock after in-game days pass, so sleep at a safehouse to advance time between them. Finish the final meeting to close the arc and earn the trophy.",
+      "missable": true,
+      "hidden": true,
+      "stage": 2
+    },
+    {
+      "name": "This Was No Boat Accident",
+      "grade": "Bronze",
+      "description": "Survive a dangerous encounter out on the water.",
+      "guide": "Take a boat out into deep water away from the shore and linger in the marked danger areas. When the encounter triggers, keep the boat moving and steer toward shallow water or the nearest dock. Surviving until you reach safety, or dealing with the threat directly, earns the trophy.",
+      "missable": false,
+      "hidden": true,
+      "stage": 3
+    },
+    {
+      "name": "The Lone Rider",
+      "grade": "Bronze",
+      "description": "Complete a long solo journey across the map on two wheels.",
+      "guide": "Take a motorcycle and ride the full marked distance without fast travel or switching vehicles. Highways are the safest way to keep your speed up and avoid crashes that reset your flow. Plan the route from one end of Leonida to the other and refuel your patience rather than rushing.",
+      "missable": false,
+      "hidden": false,
+      "stage": 3
+    },
+    {
+      "name": "Strangers & Freaks",
+      "grade": "Silver",
+      "description": "Meet and help the oddball characters scattered around Leonida.",
+      "guide": "Complete the full set of stranger side missions that appear as question marks and letter markers on the map. Some characters only appear at certain times of day, so revisit quiet spots at night if a marker refuses to show. Finishing the final stranger arc, not just meeting everyone, is what earns the trophy.",
+      "missable": true,
+      "hidden": false,
+      "stage": 3
+    },
+    {
+      "name": "Supply & Demand",
+      "grade": "Bronze",
+      "description": "Move product and keep a supply chain running smoothly.",
+      "guide": "Take on the delivery and resupply jobs tied to a business or contact and complete the required number of runs. Use a fast, durable vehicle and vary your routes when rivals or police take an interest. Completing runs without losing the cargo speeds this up considerably.",
+      "missable": false,
+      "hidden": false,
+      "stage": 4
+    },
+    {
+      "name": "Spin On This!",
+      "grade": "Bronze",
+      "description": "Win a prize from a wheel or chance-based attraction.",
+      "guide": "Visit the venue that hosts the prize wheel and use your daily spin when it becomes available. Prizes are random, so return on later in-game days if your first spins only land small rewards. Landing one of the headline prizes, such as the podium vehicle, completes the requirement.",
+      "missable": false,
+      "hidden": false,
+      "stage": 3
+    },
+    {
+      "name": "Positive Mental Attitude",
+      "grade": "Bronze",
+      "description": "Take part in a wellness or mindfulness activity in Leonida.",
+      "guide": "Find the marked wellness activity, such as a yoga spot or guided session, and complete it from start to finish. Follow the on-screen prompts calmly rather than rushing the inputs, as mistakes can restart a sequence. Finishing one full session is all the trophy asks for.",
+      "missable": false,
+      "hidden": false,
+      "stage": 3
+    },
+    {
+      "name": "Fair Game",
+      "grade": "Bronze",
+      "description": "Hunt or track wildlife out in the Leonida wilderness.",
+      "guide": "Head into the rural and swamp areas with a scoped weapon and track one of the larger animals. Crouch and approach from downwind where the game models it, then take a clean shot. Photographing or harvesting the animal, depending on the challenge prompt, completes the requirement.",
+      "missable": false,
+      "hidden": false,
+      "stage": 3
+    },
+    {
+      "name": "Don't Touch My Deck",
+      "grade": "Silver",
+      "description": "Defend your boat, deck or property from attackers.",
+      "guide": "Trigger the property defence event by owning or boarding the relevant vessel or location, then repel every wave of attackers. Stay mobile on deck and use the mounted cover points instead of standing in the open. The trophy pops once the final attacker is dealt with and the area is clear.",
+      "missable": true,
+      "hidden": true,
+      "stage": 2
+    },
+    {
+      "name": "You WAiNKer!",
+      "grade": "Silver",
+      "description": "Endure or deliver a very British insult during an encounter.",
+      "guide": "This is tied to a specific character encounter, so complete that contact's mission chain until the confrontation scene plays. Let the scene run without skipping, because the line that names the trophy lands mid-argument. Finishing the mission right after the exchange earns you the trophy.",
+      "missable": true,
+      "hidden": true,
+      "stage": 2
+    },
+    {
+      "name": "One Last Thing",
+      "grade": "Bronze",
+      "description": "Handle a final favour after the main story dust settles.",
+      "guide": "After finishing the main story, answer the follow-up call or visit the marker for one last request. The task itself is short, but it only appears once the finale is complete and some in-game time has passed. Sleep at a safehouse to advance time if the call is slow to arrive.",
+      "missable": true,
+      "hidden": true,
+      "stage": 2
+    },
+    {
+      "name": "Hot Together",
+      "grade": "Bronze",
+      "description": "Share a memorable moment with both protagonists together.",
+      "guide": "Play the mission or activity that requires both protagonists working as a pair and finish it without splitting up early. Co-operative driving and shooting sections are easier if you let the prompted character take their scripted role. The trophy unlocks at the end of the shared sequence.",
+      "missable": false,
+      "hidden": true,
+      "stage": 1
+    },
+    {
+      "name": "Retail Therapy",
+      "grade": "Bronze",
+      "description": "Spend big on clothes, gear and lifestyle upgrades.",
+      "guide": "Visit clothing stores, barbers and gear shops and spend until the cumulative spending threshold is reached. Expensive outfits and vehicle parts count just as well as small purchases, so buy what you actually want to use. Keep receipts simple by shopping in one big spree once you are rich late in the game.",
+      "missable": false,
+      "hidden": false,
+      "stage": 4
+    },
+    {
+      "name": "Whip It Good",
+      "grade": "Bronze",
+      "description": "Customise a vehicle until it truly feels like yours.",
+      "guide": "Take any owned car to a mod shop and apply a spread of upgrades across performance and cosmetics. Resprays and wheels alone are not enough, so add engine, armour or transmission parts as well. Drive out of the shop in the finished car to lock in the trophy.",
+      "missable": false,
+      "hidden": false,
+      "stage": 3
+    },
+    {
+      "name": "Gunslinger",
+      "grade": "Bronze",
+      "description": "Show fast, accurate shooting in combat encounters.",
+      "guide": "Build a streak of headshot eliminations in free-roam combat or replayable encounters until the requirement is met. A pistol or marksman rifle with a steady aim makes the streak much easier to hold. Raise your wanted level deliberately in a quiet area if you need a steady supply of targets.",
+      "missable": false,
+      "hidden": true,
+      "stage": 4
+    },
+    {
+      "name": "Catch Me If You Can",
+      "grade": "Bronze",
+      "description": "Escape a high wanted level after a long police chase.",
+      "guide": "Raise your wanted level to four or five stars, then survive the chase long enough before shaking it. Break line of sight in tunnels, parking structures or off-road terrain, and swap vehicles when the heat description goes out. The trophy unlocks the moment you fully lose the wanted level after the long pursuit.",
+      "missable": false,
+      "hidden": false,
+      "stage": 4
+    },
+    {
+      "name": "Challenging Tank",
+      "grade": "Bronze",
+      "description": "Go head to head with heavy armour and come out on top.",
+      "guide": "Find or provoke the armoured vehicle encounter, then use explosives or heavy weapons from cover at medium range. Keep moving between shots, because standing still lets the main gun line you up quickly. Destroying or disabling the vehicle and surviving the blast zone earns the trophy.",
+      "missable": false,
+      "hidden": true,
+      "stage": 4
+    },
+    {
+      "name": "Sneakthief",
+      "grade": "Bronze",
+      "description": "Complete a burglary or infiltration without being spotted.",
+      "guide": "Enter the marked location quietly at night, crouch-walk past guards and avoid security cameras where they sweep. Take only the target item on your first run so you can learn the patrol routes safely. Exiting the area without an alert ever triggering completes the requirement.",
+      "missable": false,
+      "hidden": false,
+      "stage": 4
+    },
+    {
+      "name": "Maximum Withdrawal",
+      "grade": "Silver",
+      "description": "Extract the biggest possible payout from a score or robbery.",
+      "guide": "Replay the relevant robbery with the best approach, the best crew and full preparation so the maximum take is available. Grab every stack of cash during the timed looting phase and protect the carrier on the way out. Finishing with the top payout bracket reached is what earns the trophy.",
+      "missable": true,
+      "hidden": true,
+      "stage": 2
+    },
+    {
+      "name": "A Classic Blitz Play",
+      "grade": "Bronze",
+      "description": "Execute a bold smash-and-grab in classic crew style.",
+      "guide": "Complete the story mission built around the armoured truck ambush, including its setup tasks. Position the blocker vehicle exactly where the marker suggests so the ambush triggers cleanly. Hold the position during the shootout and finish the getaway to earn the trophy.",
+      "missable": false,
+      "hidden": true,
+      "stage": 1
+    },
+    {
+      "name": "The Goodtime State",
+      "grade": "Bronze",
+      "description": "Visit landmarks and soak up the best of Leonida.",
+      "guide": "Travel to the highlighted points of interest spread across the state, from beaches to swamp towns. The in-game checklist advances as you enter each area, so a relaxed road trip covers most of them naturally. Use a helicopter for the island stops to finish the tour quickly.",
+      "missable": false,
+      "hidden": false,
+      "stage": 3
+    },
+    {
+      "name": "Pest Control",
+      "grade": "Bronze",
+      "description": "Deal with a swarm or infestation problem for a client.",
+      "guide": "Accept the pest control side job and clear every marked target at the location. A shotgun or automatic weapon handles clustered targets fastest, and explosives work if you stand well back. Report back to the client once the area reads clear to finish the job.",
+      "missable": false,
+      "hidden": false,
+      "stage": 3
+    },
+    {
+      "name": "In The Beginning…",
+      "grade": "Bronze",
+      "description": "Witness the very start of the saga in the opening chapter.",
+      "guide": "Play the prologue chapter from a fresh start and reach its concluding cutscene. The trophy is story-locked to this opening, so a brand-new save guarantees it if your main save predates tracking. Do not skip the final prologue scene, as the unlock lands as it ends.",
+      "missable": false,
+      "hidden": true,
+      "stage": 1
+    },
+    {
+      "name": "Capital Offense",
+      "grade": "Bronze",
+      "description": "Commit a headline crime in the state capital district.",
+      "guide": "Travel to the government or downtown district and complete the mission or crime the trophy tracks there. Expect a heavy police response, so plan an escape route into the metro or parking network beforehand. Losing the wanted level afterwards seals the completion.",
+      "missable": false,
+      "hidden": true,
+      "stage": 1
+    },
+    {
+      "name": "Let’s Go Bowling",
+      "grade": "Bronze",
+      "description": "Hit the lanes for a game of bowling with a friend.",
+      "guide": "Invite or meet a companion at the bowling venue and play one complete game, win or lose. Use a light, straight throw down the middle while you learn how spin is applied. Finishing all frames of the game is what matters, not your final score.",
+      "missable": false,
+      "hidden": false,
+      "stage": 3
+    },
+    {
+      "name": "Personal Best",
+      "grade": "Bronze",
+      "description": "Beat your own record in a timed or scored challenge.",
+      "guide": "Post any score in a race, trial or range challenge, then replay it and beat that first result. Pick a short course so retries are quick and frustration stays low. Your second, improved result triggers the trophy as soon as the results screen compares the two.",
+      "missable": false,
+      "hidden": false,
+      "stage": 4
+    },
+    {
+      "name": "Actions Speak Louder",
+      "grade": "Bronze",
+      "description": "Let a deed, not a dialogue choice, decide an outcome.",
+      "guide": "During the tracked encounter, ignore the talk prompts and take the direct physical action the scene offers instead. The window can be brief, so keep your hands on the controls during cutscenes involving this character. Completing the encounter through action earns the trophy.",
+      "missable": true,
+      "hidden": true,
+      "stage": 2
+    },
+    {
+      "name": "Bad Luck, I Guess",
+      "grade": "Bronze",
+      "description": "Have a plan fall apart in an unlucky, memorable way.",
+      "guide": "This unlock is tied to a scripted mishap, so play the related mission or activity and let the failure scene play out fully. Do not restart the checkpoint when things go wrong, because the bad outcome is exactly what the trophy wants. It pops once the dust settles and control returns to you.",
+      "missable": false,
+      "hidden": true,
+      "stage": 1
+    },
+    {
+      "name": "The Truth Is Out There",
+      "grade": "Bronze",
+      "description": "Investigate a strange sighting or conspiracy in Leonida.",
+      "guide": "Follow the odd sighting reports that appear as a collectible or stranger thread and visit each marked location. Night visits work best, and a camera or phone photo may be requested at the final spot. Completing the last investigation step earns the trophy.",
+      "missable": false,
+      "hidden": true,
+      "stage": 3
+    },
+    {
+      "name": "Ten Pin",
+      "grade": "Bronze",
+      "description": "Knock down every pin with a single bowling throw.",
+      "guide": "At the bowling venue, aim slightly off-centre with medium power and a touch of spin to drive through the pocket. Strikes are partly rhythm-based, so watch the power meter and release at the same point each throw. One genuine strike in a normal game is enough for the trophy.",
+      "missable": false,
+      "hidden": false,
+      "stage": 4
+    },
+    {
+      "name": "Dime on the Dollar",
+      "grade": "Bronze",
+      "description": "Buy low and sell high in a trading or fencing opportunity.",
+      "guide": "Use the in-game trading, fencing or resale system to sell an item for notably more than you paid for it. Stolen vehicles, discounted goods and timed price swings are the easiest routes to a clean profit. Complete the profitable sale and the margin you made triggers the trophy.",
+      "missable": false,
+      "hidden": false,
+      "stage": 4
+    },
+    {
+      "name": "Treat Yo Self",
+      "grade": "Bronze",
+      "description": "Splurge on a luxury purchase purely for the joy of it.",
+      "guide": "Save up and buy one of the high-end luxury items, such as a premium vehicle, watch or designer outfit, from its store. The purchase must come from your own funds in free roam rather than a mission gift. Leaving the store wearing or driving your splurge earns the trophy.",
+      "missable": false,
+      "hidden": false,
+      "stage": 4
+    },
+    {
+      "name": "Little Boxes",
+      "grade": "Bronze",
+      "description": "Find hidden packages tucked away across the suburbs.",
+      "guide": "Hunt the hidden package collectibles placed on rooftops, in yards and under bridges across residential areas. Listen for the audio cue when you are close and check behind fences and air-conditioning units. Collecting the required count, rather than every single package, is enough for this trophy.",
+      "missable": false,
+      "hidden": true,
+      "stage": 3
+    },
+    {
+      "name": "On the Spot",
+      "grade": "Bronze",
+      "description": "Make a split-second decision under pressure and live with it.",
+      "guide": "During the timed decision scene, commit to either option before the timer runs out instead of letting it expire. There is no wrong answer for the trophy, only hesitation, so trust your first instinct. The trophy unlocks as the scene resolves based on your choice.",
+      "missable": true,
+      "hidden": true,
+      "stage": 2
+    }
+  ]
 }

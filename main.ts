@@ -1,20 +1,12 @@
-// A working gta6-trophy-guide-01 entry (Node 22, standard library only): the guide is this directory's app/ folder,
-// plain static files a browser opens at app/index.html (ES modules, CSS, no build step), offline: it loads nothing
-// over the network, and its trophy list and guides are app/data/trophies.json. The program hands it in: it copies app/
-// and screenshots/ from beside this file to /output and writes /output/dossier.json, the summary the judge reads (your
-// screenshots, the first load's files and bytes, and your source), with the vendored make.fun library. Leave
-// vendor/makefun-frontend.ts as it is: the scorer requires dossier.json to be byte for byte what its own copy writes.
-//
-// Only the plumbing, not a winner: a plain checklist of the 55 trophies with a one-line hint each. Write a real guide
-// for every trophy in your own words, a roadmap to the platinum, filters and a spoiler setting in app/, put 3 or 4 PNG
-// or JPEG screenshots of it in screenshots/ (the first by name is the cover; shots.json says which views this
-// starter's were taken of), and run it.
-//
-// Serve it locally with `node serve.ts`, then open http://localhost:8080.
-// Outside the grader's container, MAKEFUN_OUTPUT_DIR stands in for /output:
-//   mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
+// Vice Got a Price! — GTA VI Trophy Guide & Platinum Roadmap (make.fun entry gta6-trophy-guide-01).
+// This program hands the guide in: it copies the static app in app/ and the captures in
+// screenshots/ to the output directory and writes dossier.json there with the vendored
+// make.fun library, so the judge reads exactly the files a browser would open.
+// Before copying, it sanity-checks the guide data itself: it loads app/data/trophies.json
+// from beside this file, counts the trophies it holds and prints that count, so a broken
+// or truncated data file fails loudly here instead of reaching the judge.
 
-import { cpSync, existsSync, mkdirSync, writeFileSync } from 'node:fs';
+import { cpSync, existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { buildDossier } from './vendor/makefun-frontend.ts';
@@ -22,6 +14,25 @@ import { buildDossier } from './vendor/makefun-frontend.ts';
 const here = fileURLToPath(new URL('.', import.meta.url));
 const out = process.env.MAKEFUN_OUTPUT_DIR ?? '/output';
 
+// --- Guide data check (authored for this entry) ---------------------------
+// The guide lives or dies by its trophy list, so verify it before packaging:
+// the JSON must parse, it must hold a trophies array, and every entry in that
+// array must carry a non-blank guide string for the reader.
+const trophyFile = join(here, 'app', 'data', 'trophies.json');
+const trophyData = JSON.parse(readFileSync(trophyFile, 'utf8'));
+const trophyList = Array.isArray(trophyData) ? trophyData : trophyData.trophies;
+if (!Array.isArray(trophyList)) {
+  throw new Error('trophies.json: expected an object holding a "trophies" array');
+}
+const unguided = trophyList.filter(
+  (entry) => typeof entry.guide !== 'string' || entry.guide.trim() === '',
+);
+if (unguided.length > 0) {
+  throw new Error(`trophies.json: ${unguided.length} trophies are missing a guide`);
+}
+console.log(`Vice Got a Price! guide check: ${trophyList.length} trophies, every one with a guide.`);
+
+// --- Packaging (starter plumbing, kept working) ---------------------------
 mkdirSync(out, { recursive: true });
 cpSync(join(here, 'app'), join(out, 'app'), { recursive: true });
 mkdirSync(join(out, 'screenshots'), { recursive: true });
