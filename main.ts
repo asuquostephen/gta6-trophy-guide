@@ -11,11 +11,10 @@
 // starter's were taken of), and run it.
 //
 // Serve it locally with `node serve.ts`, then open http://localhost:8080.
-// Authored for this entry: Leonida Legend, an original 55-trophy GTA VI guide & tracker (roadmap, cautious missable flags, per-trophy cited sources).
 // Outside the grader's container, MAKEFUN_OUTPUT_DIR stands in for /output:
 //   mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
 
-import { cpSync, existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { cpSync, existsSync, mkdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { buildDossier } from './vendor/makefun-frontend.ts';
@@ -35,29 +34,3 @@ writeFileSync(
   join(out, 'dossier.json'),
   buildDossier(out, { text_max_bytes: 163840, screenshots: { max: 4, max_bytes: 262144 }, app_max_files: 993, app_max_bytes: 50331648 }),
 );
-
-// Sidecar summary of the trophy list, computed from the app's own data file and
-// written beside the dossier (the dossier above is left exactly as buildDossier
-// wrote it). Counts are derived, never hand-typed, so they cannot drift from
-// app/data/trophies.json.
-const trophyDoc = JSON.parse(readFileSync(join(here, 'app', 'data', 'trophies.json'), 'utf8'));
-const byGrade = {};
-for (const t of trophyDoc.trophies) byGrade[t.grade] = (byGrade[t.grade] ?? 0) + 1;
-// Roadmap coverage: how many trophies carry a roadmapOrder (the "What next?"
-// sequence in the app), and the stage counts listed in roadmap order.
-const roadmapStages = [...new Set(trophyDoc.trophies.map((t) => t.stage))]
-  .sort((a, b) => a - b)
-  .map((stage) => ({ stage, count: trophyDoc.trophies.filter((t) => t.stage === stage).length }));
-const summary = {
-  game: trophyDoc.game,
-  platform: trophyDoc.platform,
-  total: trophyDoc.trophies.length,
-  byGrade,
-  missable: trophyDoc.trophies.filter((t) => t.missable).length,
-  withSearchTerms: trophyDoc.trophies.filter((t) => typeof t.searchTerms === 'string').length,
-  roadmap: {
-    withOrder: trophyDoc.trophies.filter((t) => Number.isInteger(t.roadmapOrder)).length,
-    stages: roadmapStages,
-  },
-};
-writeFileSync(join(out, 'trophies-summary.json'), JSON.stringify(summary, null, 2) + '\n');
